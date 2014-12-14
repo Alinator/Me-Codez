@@ -1,0 +1,159 @@
+Group I
+Step by Step 
+Gps Navigation System
+
+This software has been developed by Group I of IT university in Gothenburg university.
+A group of students stydying at IT university, which comprise of:
+
+Dmitry Igoshin
+Kirill Blazhko
+Johan W Schutzer
+Sebastian Hansson
+Mahsa Mirtalebi
+Ali Nazar
+
+This software is not for sale or for sell at retail level. This is free open source system, that can be 
+downloaded by anyone for free, without any charge, as agreed within Group I.
+
+*****************************TO RUN THE JAR FILE******************************
+
+1 ) open up command line.
+2 ) cd towards the directory in which you have stored the jar file.its in the submission folder.   
+3 ) ones inside the file write: java -jar SBSwithsounds.jar 
+
+******************** HOW TO INSTALL FOR LINUX*********************************
+This section is specifically for how to run the software on the Linux platform. Please note that 
+the software can only be run on windows and Linux operative systems. Any try on running the system on a 
+Mac operative may result in complete failure or maybe that some parts of the software dont function properly.
+
+The software will run good on Linux, however the things that you as a user have to do, in order to recieve 
+coordinates and see you position on the map, while running the system inside Linux is the following:
+
+open the Linux file and choose i686-unknown-linux-gnu. Inside of it you will find :
+
+librxtxParallel.so
+librxtxSerial.so
+
+copy theese files inside /usr/java/j2sdk1.4.0/jre/lib/i386/
+
+and you can also choose a different librxtxSerial.so depending on what system you are running as available
+inside of Linux file.
+
+FINAL STEP:
+now copy the RXTXcomm.jar into the following link /usr/java/j2sdk1.4.0/jre/lib/ext/
+
+the file path may vary on your computer so please adjust it accordingly.
+
+**************************** HOW TO INSTALL FOR WINDOWS **************************************
+
+Same as for Linux, the only setting that has to be made is for the recieving of coordinates.
+the system will work properly after the following settings:
+
+Choose your binary build - x64 or x86 (based on which version of
+the JVM you are installing to)
+
+NOTE: You MUST match your architecture.  You can't install the i386
+version on a 64-bit version of the JDK and vice-versa.
+
+For a JDK installation:
+
+Copy RXTXcomm.jar ---> <JAVA_HOME>\jre\lib\ext
+Copy rxtxSerial.dll ---> <JAVA_HOME>\jre\bin
+Copy rxtxParallel.dll ---> <JAVA_HOME>\jre\bin
+
+********************************************************************************************
+************************ PROGRAM FUNCTIONALITY *********************************************
+
+Make sure that you have a folder named "routes" in the same folder as the jar file.
+It's ok if it's empty.
+Make sure that you have a file "placeinputs.txt" in the same folder as the jar file.
+It's ok if it's empty.
+
+
+Short about navigation: When a navigation path is displayed, it will
+		        get updated every second, from your
+			current location to the raget location.
+			Sometimes it might display a path that requires
+			you to head backwards in the path. Simply
+			ignore this and follow the path to the target.
+			The program will inform you when your are within
+			ten meters from the target.
+Main menu
+
+Searchbar: Enter an address here in the prompted format. This will set
+	   a point at the location, and display the path from your
+	   current location to this point.
+
+Routes: Press this button to go to the route menu
+
+Routes list: This list loads the routes contained in the "routes" folder.
+	     Pick a route to display it. This is not for navigation, just
+	     to display a route.
+
+Create route button: press this button go to the create route mode.
+		     Here you can create your own route. Press set point to
+		     set the points, one by one, on the map. Be sure to pick them
+		     in the desired order (works just like set point in the main 		     menu stage). Press remove point to remove the latest added 		     point, continue to press it to remove the points in the 		     opposite order that they were set in. Enter a name and press
+		     press save to save the route to the "routes" folder. When you
+		     visit the routes menu again, the new route will be loaded in
+		     the list. 
+
+Set point: Press this button and the click on the location on the map
+	   to set a point. This will display a path from your current 
+	   location to this point.
+
+Geocaches: Press this button to go to the geocaches menu. This will first
+	   open a file chooser. Pick the .loc file you want to load. A list
+	   of the geocaches from the .loc file will be displayed. Pick one
+	   to display a path from yoour current location to that geoache.
+	   Only one geocache can be selected at once. 
+
+Options: Press this to go the options menu
+		Here you can select different options;
+		Measuring standard: Display distance in meters or kilometers
+		Sound: Turn sound on or off
+		Time standard: Display the clock in 12 or 24 hour standard
+		Pathfinding: Select between two different pathfinding methods.
+			     Use "Old" for Lindholmen.
+
+Twitter button: Will open a small window where you can enter a text to send to
+		the twitter account of the application. On the twitter
+		accounts site (http://www.twitter.com/razr91) there will be
+		a new update with the given text, and a link to google maps
+		with the currentlocation where the twit was made from.
+
+Netwrok button: This will open the networking window. By defualt the password
+		for each account must be "stepbystep". The account must be
+		a gmail or jabber account. Then you will see your friends
+		location on your map, and he will see yours. Both need to run
+		the application and this feature from different laptops.
+
+Interest buttons: Pick any to display interest points on the map. It will only
+		  display the points within the shown area. Press off to take them
+		  away. Zoom out and pick any interest point again to display more.
+
+About button: Press this button to see information about the project.
+
+Hide button: Press this button to hide the menubar.
+
+Show button: Press this button to display the menubar.
+
+Back button: Navigate back to the previous menu state. 
+
+Informationbar: The buttom bar on the screen displays different values of interest;
+		Current latitude, longitude, distance to target (slightly 		                inaccurate), signal strength and the clock.
+
+Navigation arrows: Press these to move the map.
+
+Zoomslider: Use this to zoom the map.
+
+Right mouse click: Hold to move the map.
+
+Mouse scroll: Use to zoom the map. 
+
+
+
+*************************************
+
+
+Thanks for using our system and hope you have benefitted from it.

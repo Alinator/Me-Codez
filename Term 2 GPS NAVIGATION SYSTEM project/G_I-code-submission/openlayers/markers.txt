@@ -1,0 +1,387 @@
+lat	lon	title	description	icon	iconSize	iconOffset
+57.7076592	11.9377366	16967350	highway=unclassified,name=Ceresgatan,oneway=yes,	icon_blue_example.png	24,24	0,-24
+57.7077818	11.9351267	16967361	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7075874	11.93509	16967363	highway=unclassified,name=Ceresgatan,oneway=yes,highway=unclassified,junction=roundabout,highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7078675	11.9345879	16967366	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7078992	11.9347849	16967368	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7075054	11.9348249	16967369	highway=residential,name=Plejadgatan,highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7064177	11.9348636	16967370	created_by=Potlatch 0.10f,highway=unclassified,name=Lärdomsgatan,highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7060677	11.9347948	16967371	highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7050707	11.933416	16967372	highway=residential,name=Förmansgatan,highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7048201	11.9329475	16967373	highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7046038	11.932777	16967374	created_by=Potlatch 0.7b,highway=steps,highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7042351	11.9328089	16967375	highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7053048	11.9324811	16967376	highway=residential,name=Förmansgatan,created_by=JOSM,highway=residential,name=Verkmästaregatan,	icon_blue_example.png	24,24	0,-24
+57.7064924	11.9335018	16967379	created_by=JOSM,highway=residential,name=Verkmästaregatan,created_by=JOSM,highway=residential,name=Släggaregatan,	icon_blue_example.png	24,24	0,-24
+57.7068523	11.9321409	16967381	highway=residential,name=Plåtslagaregatan,created_by=JOSM,highway=residential,name=Släggaregatan,	icon_blue_example.png	24,24	0,-24
+57.7066985	11.9318113	16967383	highway=residential,name=Plåtslagaregatan,	icon_blue_example.png	24,24	0,-24
+57.706583	11.931328	16967384	highway=mini_roundabout,highway=residential,name=Plåtslagaregatan,created_by=Potlatch 0.7b,highway=residential,name=Arbetaregatan,	icon_blue_example.png	24,24	0,-24
+57.7058202	11.9306449	16967387	highway=residential,name=Förmansgatan,highway=residential,name=Plåtslagaregatan,	icon_blue_example.png	24,24	0,-24
+57.7064988	11.9309995	16967421	highway=residential,name=Plåtslagaregatan,	icon_blue_example.png	24,24	0,-24
+57.7062766	11.9306565	16967424	highway=residential,name=Plåtslagaregatan,highway=residential,name=Lindholmsvägen,	icon_blue_example.png	24,24	0,-24
+57.7075457	11.9345628	16967613	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.704877	11.9309851	124601226	highway=residential,name=Plåtslagaregatan,	icon_blue_example.png	24,24	0,-24
+57.7047094	11.9319645	124601233	created_by=JOSM,created_by=JOSM,highway=residential,name=Verkmästaregatan,	icon_blue_example.png	24,24	0,-24
+57.7064605	11.9286592	124601237	highway=residential,name=Lindholmsvägen,	icon_blue_example.png	24,24	0,-24
+57.7064187	11.929616	124601244	highway=residential,name=Lindholmsvägen,	icon_blue_example.png	24,24	0,-24
+57.705707	11.9328332	124601249	created_by=JOSM,created_by=JOSM,highway=residential,name=Verkmästaregatan,highway=residential,name=Lindholmsvägen,	icon_blue_example.png	24,24	0,-24
+57.7061073	11.9331623	124601264	created_by=JOSM,created_by=JOSM,highway=residential,name=Verkmästaregatan,created_by=Potlatch 0.7b,highway=residential,name=Arbetaregatan,	icon_blue_example.png	24,24	0,-24
+57.7077198	11.9344209	124601280	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7076558	11.930785	124601326	created_by=Potlatch 0.7b,highway=residential,name=Arbetaregatan,highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.7070584	11.9310485	124601330	created_by=Potlatch 0.7b,highway=residential,name=Arbetaregatan,	icon_blue_example.png	24,24	0,-24
+57.7068257	11.9310908	124601337	created_by=Potlatch 0.7b,highway=residential,name=Arbetaregatan,	icon_blue_example.png	24,24	0,-24
+57.7076729	11.9323363	124601346	highway=residential,name=Gjutaregetan,highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.7070779	11.9327576	124601354	created_by=JOSM,highway=residential,name=Plåtslagaregatan,highway=residential,name=Gjutaregetan,	icon_blue_example.png	24,24	0,-24
+57.7075946	11.9338392	124601361	highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.7077212	11.9300547	124601368	highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.7079391	11.9291313	124601375	highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.7053249	11.9308069	124601407	highway=residential,name=Plåtslagaregatan,	icon_blue_example.png	24,24	0,-24
+57.7053623	11.9339471	124601503	highway=residential,name=Plejadgatan,created_by=JOSM,highway=steps,	icon_blue_example.png	24,24	0,-24
+57.7075406	11.935002	124601514	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7068269	11.9338366	189299726	created_by=JOSM,highway=residential,name=Gjutaregetan,created_by=JOSM,highway=residential,name=Verkmästaregatan,	icon_blue_example.png	24,24	0,-24
+57.7071938	11.9341649	189299734	created_by=JOSM,created_by=JOSM,highway=residential,name=Verkmästaregatan,created_by=JOSM,highway=steps,	icon_blue_example.png	24,24	0,-24
+57.7074474	11.9363549	189299740	created_by=Potlatch 0.10f,highway=unclassified,name=Kunskapsgatan,	icon_blue_example.png	24,24	0,-24
+57.7063082	11.9352978	189299745	created_by=Potlatch 0.10f,highway=unclassified,name=Lärdomsgatan,created_by=Potlatch 0.10f,highway=unclassified,name=Kunskapsgatan,	icon_blue_example.png	24,24	0,-24
+57.7052686	11.9342573	189299751	created_by=Potlatch 0.10f,highway=residential,created_by=Potlatch 0.10f,highway=unclassified,created_by=JOSM,highway=steps,	icon_blue_example.png	24,24	0,-24
+57.7047629	11.9334127	189299759	created_by=Potlatch 0.7b,highway=steps,created_by=Potlatch 0.10f,highway=unclassified,	icon_blue_example.png	24,24	0,-24
+57.7045758	11.9331898	189299765	created_by=Potlatch 0.10f,highway=unclassified,	icon_blue_example.png	24,24	0,-24
+57.7061618	11.935859	189299778	created_by=Potlatch 0.10f,highway=unclassified,name=Lärdomsgatan,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Närgången,	icon_blue_example.png	24,24	0,-24
+57.7059692	11.9366486	189299781	created_by=Potlatch 0.10f,highway=unclassified,name=Lärdomsgatan,foot=permissive,highway=footway,name=Forskningsgången,	icon_blue_example.png	24,24	0,-24
+57.705773	11.9374446	189299787	created_by=Potlatch 0.10f,highway=unclassified,name=Lärdomsgatan,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Hörselgången,	icon_blue_example.png	24,24	0,-24
+57.7074175	11.9341802	189299799	highway=residential,name=Gamla Ceresgatan,created_by=JOSM,highway=steps,	icon_blue_example.png	24,24	0,-24
+57.707309	11.9348401	189299806	highway=residential,name=Plejadgatan,highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.704593	11.9330621	253616550	created_by=Potlatch 0.7b,highway=steps,	icon_blue_example.png	24,24	0,-24
+57.7078075	11.9375854	253616626	created_by=Potlatch 0.7b,highway=unclassified,oneway=yes,	icon_blue_example.png	24,24	0,-24
+57.7078763	11.9372335	253616628	created_by=Potlatch 0.7b,highway=unclassified,oneway=yes,	icon_blue_example.png	24,24	0,-24
+57.7076241	11.9374051	253616631	highway=unclassified,name=Ceresgatan,oneway=yes,created_by=Potlatch 0.7b,highway=unclassified,oneway=yes,	icon_blue_example.png	24,24	0,-24
+57.707702	11.9375768	253616632	created_by=Potlatch 0.7b,highway=unclassified,oneway=yes,	icon_blue_example.png	24,24	0,-24
+57.7078763	11.9374566	253616633	created_by=Potlatch 0.7b,highway=unclassified,oneway=yes,	icon_blue_example.png	24,24	0,-24
+57.7059117	11.9338847	253617852	created_by=Potlatch 0.7b,highway=residential,name=Arbetaregatan,	icon_blue_example.png	24,24	0,-24
+57.7053935	11.933756	253617854	highway=residential,name=Lindholmsvägen,	icon_blue_example.png	24,24	0,-24
+57.7114135	11.9423821	287059579	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7057997	11.9399307	287064139	bicycle=yes,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7061932	11.9390449	287064142	bicycle=yes,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7046055	11.9376734	287064143	bicycle=yes,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Diagonalen,	icon_blue_example.png	24,24	0,-24
+57.7063389	11.9394758	287064330	created_by=Potlatch 0.10b,foot=yes,highway=footway,bicycle=yes,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7065266	11.9403773	287064331	created_by=Potlatch 0.10b,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.706059	11.9407546	287064332	created_by=Potlatch 0.10b,foot=yes,highway=footway,bicycle=yes,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7059932	11.9408094	287064492	bicycle=yes,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7030243	11.9334942	287661728	created_by=Potlatch 0.10f,highway=unclassified,	icon_blue_example.png	24,24	0,-24
+57.7058538	11.9345803	291883971	highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7083199	11.9391355	293221765	created_by=Potlatch 0.10b,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7076353	11.937938	293222131	foot=designated,highway=cycleway,created_by=Potlatch 0.10f,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7075432	11.9352395	293222133	foot=designated,highway=cycleway,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7074494	11.9350598	293222135	foot=designated,highway=cycleway,	icon_blue_example.png	24,24	0,-24
+57.7075285	11.9343042	293222136	foot=designated,highway=cycleway,	icon_blue_example.png	24,24	0,-24
+57.7098347	11.9312092	293222752	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7078413	11.9336774	293222753	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7075672	11.9342229	293222755	foot=designated,highway=cycleway,foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7078509	11.9343846	293222756	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7079256	11.9345526	293222757	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7079989	11.9346813	293222758	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7080134	11.9347924	293222759	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7079697	11.9350679	293222760	foot=designated,highway=cycleway,lit=yes,segregated=yes,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.709171	11.9371793	293222761	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7105466	11.9395997	293222762	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7107208	11.9402435	293222763	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7111059	11.9418142	293222764	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7075891	11.9376686	293222849	foot=designated,highway=cycleway,	icon_blue_example.png	24,24	0,-24
+57.7074629	11.9396005	293699058	created_by=Potlatch 0.10b,foot=yes,highway=footway,created_by=Potlatch 0.10b,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7075182	11.9398298	293699546	created_by=Potlatch 0.10b,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7078364	11.9401064	293699547	created_by=Potlatch 0.10b,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7078976	11.9403591	293699550	highway=crossing,created_by=Potlatch 0.10b,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7078933	11.93928	293700509	created_by=Potlatch 0.10b,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7078417	11.9352429	293701265	foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7077861	11.9352958	293701266	highway=crossing,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7076065	11.9352518	293701268	highway=crossing,highway=unclassified,name=Ceresgatan,oneway=yes,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.707447	11.9346156	293701570	foot=designated,highway=cycleway,	icon_blue_example.png	24,24	0,-24
+57.709235	11.9320395	293701763	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.707703	11.9337322	293702252	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7073335	11.9344818	293982619	highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.7078597	11.9350107	293982702	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7076	11.9344723	293986183	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7078106	11.9344805	293986219	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7062689	11.9391995	293986503	bicycle=yes,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7062469	11.9416408	293986817	bicycle=yes,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7076297	11.9339897	298083551	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7055211	11.9384643	344123560	created_by=Potlatch 0.10f,highway=unclassified,name=Lärdomsgatan,bicycle=yes,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Diagonalen,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Hypotesgatan,bicycle=yes,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.707574	11.9368718	344124319	created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Hypotesgatan,foot=designated,highway=cycleway,	icon_blue_example.png	24,24	0,-24
+57.7068102	11.9374346	344124917	created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Hypotesgatan,created_by=Potlatch 0.10f,foot=yes,highway=footway,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Teknikgatan,foot=permissive,highway=footway,name=Forskningsgången,	icon_blue_example.png	24,24	0,-24
+57.7072561	11.9378799	344124919	created_by=Potlatch 0.10f,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7070514	11.9366572	344125012	created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Teknikgatan,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Närgången,	icon_blue_example.png	24,24	0,-24
+57.7050383	11.935859	344125441	foot=permissive,highway=footway,name=Forskningsgången,	icon_blue_example.png	24,24	0,-24
+57.7061842	11.9378458	344125556	created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Hörselgången,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Hypotesgatan,created_by=Potlatch 0.10f,foot=yes,highway=footway,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7066387	11.9382365	344125557	created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Hörselgången,	icon_blue_example.png	24,24	0,-24
+57.705361	11.9343498	344125653	created_by=Potlatch 0.10f,highway=unclassified,name=Kunskapsgatan,created_by=Potlatch 0.10f,highway=unclassified,	icon_blue_example.png	24,24	0,-24
+57.7073923	11.9370159	344125733	created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Hypotesgatan,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Närgången,	icon_blue_example.png	24,24	0,-24
+57.7066187	11.9362689	344126116	created_by=Potlatch 0.10f,foot=yes,highway=footway,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Närgången,	icon_blue_example.png	24,24	0,-24
+57.7064153	11.9370728	344126219	created_by=Potlatch 0.10f,foot=yes,highway=footway,foot=permissive,highway=footway,name=Forskningsgången,	icon_blue_example.png	24,24	0,-24
+57.7036711	11.9368579	344127040	bicycle=yes,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Diagonalen,	icon_blue_example.png	24,24	0,-24
+57.7045235	11.9376559	366091918	bicycle=yes,created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Diagonalen,created_by=Potlatch 0.10f,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7048055	11.9365348	366091920	created_by=Potlatch 0.10f,foot=yes,highway=footway,name=Hörselgången,created_by=Potlatch 0.10f,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.704769	11.9366768	366091943	created_by=Potlatch 0.10f,foot=yes,highway=footway,created_by=Potlatch 0.10f,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7042047	11.9362	366092009	created_by=Potlatch 0.10f,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7051628	11.9340806	366092023	created_by=Potlatch 0.10f,foot=yes,highway=footway,created_by=Potlatch 0.10f,highway=unclassified,	icon_blue_example.png	24,24	0,-24
+57.7041955	11.9339684	366092027	created_by=Potlatch 0.10f,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7041176	11.9340371	366092028	created_by=Potlatch 0.10f,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7033759	11.934563	366092049	created_by=Potlatch 0.10f,highway=residential,	icon_blue_example.png	24,24	0,-24
+57.7038889	11.9344802	366092051	created_by=Potlatch 0.10f,foot=yes,highway=footway,created_by=Potlatch 0.10f,highway=residential,	icon_blue_example.png	24,24	0,-24
+57.7073584	11.9396844	461981264	created_by=Potlatch 0.10b,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7068126	11.9372572	565431720	amenity=cafe,	icon_blue_example.png	24,24	0,-24
+57.7080013	11.9349376	565431730	highway=crossing,foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7054711	11.9338013	611512871	amenity=fast_food,	icon_blue_example.png	24,24	0,-24
+57.7055628	11.9334902	611512873	amenity=restaurant,	icon_blue_example.png	24,24	0,-24
+57.7077503	11.9337135	652083065	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7077449	11.9343021	652083068	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7077035	11.935284	652083069	foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7076949	11.9351582	652083071	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7074411	11.934835	652083073	highway=residential,name=Plejadgatan,foot=designated,highway=cycleway,	icon_blue_example.png	24,24	0,-24
+57.7047056	11.9374468	668770699		icon_blue_example.png	24,24	0,-24
+57.7055311	11.9367709	668770700	amenity=cafe,	icon_blue_example.png	24,24	0,-24
+57.7064711	11.9394316	668770701	amenity=restaurant,	icon_blue_example.png	24,24	0,-24
+57.70611	11.9387128	668770702	amenity=restaurant,	icon_blue_example.png	24,24	0,-24
+57.707204	11.9389749	702180743		icon_blue_example.png	24,24	0,-24
+57.687448	11.9040891	743218029		icon_blue_example.png	24,24	0,-24
+57.6876392	11.9038182	743218033		icon_blue_example.png	24,24	0,-24
+57.6891696	11.9028955	743218039		icon_blue_example.png	24,24	0,-24
+57.694616	11.8994462	743218043		icon_blue_example.png	24,24	0,-24
+57.6947533	11.8994301	743218048		icon_blue_example.png	24,24	0,-24
+57.696437	11.8981641	743218054		icon_blue_example.png	24,24	0,-24
+57.6980031	11.8966621	743218065		icon_blue_example.png	24,24	0,-24
+57.6982852	11.8966996	743218072		icon_blue_example.png	24,24	0,-24
+57.6978196	11.8979576	743218081		icon_blue_example.png	24,24	0,-24
+57.6974254	11.898773	743218089		icon_blue_example.png	24,24	0,-24
+57.6971488	11.899532	743218097		icon_blue_example.png	24,24	0,-24
+57.6968134	11.9001624	743218103		icon_blue_example.png	24,24	0,-24
+57.6964327	11.900562	743218107		icon_blue_example.png	24,24	0,-24
+57.6951573	11.9014069	743218112		icon_blue_example.png	24,24	0,-24
+57.6946825	11.9018709	743218122		icon_blue_example.png	24,24	0,-24
+57.6941392	11.9024583	743218125		icon_blue_example.png	24,24	0,-24
+57.6941499	11.9026649	743218129		icon_blue_example.png	24,24	0,-24
+57.6942244	11.9029009	743218131		icon_blue_example.png	24,24	0,-24
+57.6944254	11.9030725	743218136		icon_blue_example.png	24,24	0,-24
+57.6950174	11.9044244	743218140		icon_blue_example.png	24,24	0,-24
+57.6955784	11.9058272	743218145		icon_blue_example.png	24,24	0,-24
+57.6957361	11.9058406	743218147		icon_blue_example.png	24,24	0,-24
+57.695923	11.9060418	743218153		icon_blue_example.png	24,24	0,-24
+57.6964092	11.9073212	743218156		icon_blue_example.png	24,24	0,-24
+57.6965737	11.907922	743218159		icon_blue_example.png	24,24	0,-24
+57.6966827	11.9080722	743218163		icon_blue_example.png	24,24	0,-24
+57.6997572	11.9073426	743218169		icon_blue_example.png	24,24	0,-24
+57.7002476	11.9072434	743218174		icon_blue_example.png	24,24	0,-24
+57.7004396	11.9072783	743218176		icon_blue_example.png	24,24	0,-24
+57.7005686	11.9075652	743218182		icon_blue_example.png	24,24	0,-24
+57.7006328	11.9088232	743218188		icon_blue_example.png	24,24	0,-24
+57.7007576	11.9093596	743218192		icon_blue_example.png	24,24	0,-24
+57.70107	11.9102609	743218202		icon_blue_example.png	24,24	0,-24
+57.701645	11.9116771	743218210		icon_blue_example.png	24,24	0,-24
+57.7020156	11.9128358	743218215		icon_blue_example.png	24,24	0,-24
+57.7021371	11.9135439	743218221		icon_blue_example.png	24,24	0,-24
+57.7021515	11.9141447	743218230		icon_blue_example.png	24,24	0,-24
+57.7019546	11.9153893	743218243		icon_blue_example.png	24,24	0,-24
+57.7019546	11.9157755	743218249		icon_blue_example.png	24,24	0,-24
+57.7023257	11.9188091	743218256		icon_blue_example.png	24,24	0,-24
+57.702484	11.9193804	743218277		icon_blue_example.png	24,24	0,-24
+57.7026474	11.9197103	743218281		icon_blue_example.png	24,24	0,-24
+57.7028672	11.9199034	743218286		icon_blue_example.png	24,24	0,-24
+57.7030876	11.9199463	743218292		icon_blue_example.png	24,24	0,-24
+57.7034104	11.919839	743218301		icon_blue_example.png	24,24	0,-24
+57.7037185	11.919595	743218308		icon_blue_example.png	24,24	0,-24
+57.7044837	11.9186723	743218320		icon_blue_example.png	24,24	0,-24
+57.7048733	11.9182646	743218327		icon_blue_example.png	24,24	0,-24
+57.7051867	11.9181224	743218330		icon_blue_example.png	24,24	0,-24
+57.7054562	11.9182002	743218334		icon_blue_example.png	24,24	0,-24
+57.7057909	11.9185087	743218339		icon_blue_example.png	24,24	0,-24
+57.7059698	11.9191873	743218345		icon_blue_example.png	24,24	0,-24
+57.7062615	11.9207832	743218349		icon_blue_example.png	24,24	0,-24
+57.70641	11.9220197	743218355		icon_blue_example.png	24,24	0,-24
+57.706326	11.9221345	743218363		icon_blue_example.png	24,24	0,-24
+57.7050635	11.9235512	743218368		icon_blue_example.png	24,24	0,-24
+57.7048858	11.9239079	743218374		icon_blue_example.png	24,24	0,-24
+57.7048248	11.9248601	743218378		icon_blue_example.png	24,24	0,-24
+57.7048904	11.925131	743218383		icon_blue_example.png	24,24	0,-24
+57.7061864	11.9253537	743218390		icon_blue_example.png	24,24	0,-24
+57.7077146	11.9260323	743218394		icon_blue_example.png	24,24	0,-24
+57.7087784	11.9267833	743218398		icon_blue_example.png	24,24	0,-24
+57.7077753	11.9301521	743218402		icon_blue_example.png	24,24	0,-24
+57.7076911	11.9308388	743218408		icon_blue_example.png	24,24	0,-24
+57.7077037	11.9332286	743218413		icon_blue_example.png	24,24	0,-24
+57.7076808	11.9338509	743218421		icon_blue_example.png	24,24	0,-24
+57.7076249	11.9339716	743218438		icon_blue_example.png	24,24	0,-24
+57.707602	11.934323	743218445		icon_blue_example.png	24,24	0,-24
+57.707597	11.9364687	743218450		icon_blue_example.png	24,24	0,-24
+57.7076249	11.9377267	743218453		icon_blue_example.png	24,24	0,-24
+57.7124238	11.9461408	743218457		icon_blue_example.png	24,24	0,-24
+57.7124183	11.9462561	743218461		icon_blue_example.png	24,24	0,-24
+57.7113904	11.9482275	743218464		icon_blue_example.png	24,24	0,-24
+57.7113696	11.9483456	743218470		icon_blue_example.png	24,24	0,-24
+57.7113971	11.9484368	743218473		icon_blue_example.png	24,24	0,-24
+57.7115698	11.948485	743218476		icon_blue_example.png	24,24	0,-24
+57.7116225	11.9485574	743218480		icon_blue_example.png	24,24	0,-24
+57.7123799	11.9490215	743218483		icon_blue_example.png	24,24	0,-24
+57.7130261	11.949279	743218487		icon_blue_example.png	24,24	0,-24
+57.7140866	11.9498315	743218490		icon_blue_example.png	24,24	0,-24
+57.7150527	11.9504752	743218492		icon_blue_example.png	24,24	0,-24
+57.716567	11.9516071	743218495		icon_blue_example.png	24,24	0,-24
+57.7168112	11.9517412	743218498		icon_blue_example.png	24,24	0,-24
+57.7171801	11.9528731	743218501		icon_blue_example.png	24,24	0,-24
+57.7173255	11.952857	743218504		icon_blue_example.png	24,24	0,-24
+57.7174401	11.9527176	743218507		icon_blue_example.png	24,24	0,-24
+57.717451	11.9525888	743218509		icon_blue_example.png	24,24	0,-24
+57.7173825	11.9524332	743218512		icon_blue_example.png	24,24	0,-24
+57.7174197	11.952503	743218515		icon_blue_example.png	24,24	0,-24
+57.7178395	11.9516447	743218517		icon_blue_example.png	24,24	0,-24
+57.7179007	11.9517412	743218520		icon_blue_example.png	24,24	0,-24
+57.7183076	11.951076	743218522		icon_blue_example.png	24,24	0,-24
+57.718609	11.9504752	743218533		icon_blue_example.png	24,24	0,-24
+57.7191284	11.9507059	743218536		icon_blue_example.png	24,24	0,-24
+57.7195697	11.9515964	743218542		icon_blue_example.png	24,24	0,-24
+57.7197524	11.9520524	743218548		icon_blue_example.png	24,24	0,-24
+57.7197839	11.9523581	743218550		icon_blue_example.png	24,24	0,-24
+57.7197645	11.9529375	743218553		icon_blue_example.png	24,24	0,-24
+57.7192682	11.9542518	743218557		icon_blue_example.png	24,24	0,-24
+57.7192144	11.9547882	743218561		icon_blue_example.png	24,24	0,-24
+57.7193911	11.9551691	743218564		icon_blue_example.png	24,24	0,-24
+57.719659	11.9553703	743218568		icon_blue_example.png	24,24	0,-24
+57.7199142	11.9556546	743218572		icon_blue_example.png	24,24	0,-24
+57.7200595	11.9564244	743218575		icon_blue_example.png	24,24	0,-24
+57.7200023	11.9571593	743218578		icon_blue_example.png	24,24	0,-24
+57.7200097	11.9593802	743218580		icon_blue_example.png	24,24	0,-24
+57.7200801	11.9596227	743218584		icon_blue_example.png	24,24	0,-24
+57.7200796	11.9599139	743218589		icon_blue_example.png	24,24	0,-24
+57.7198976	11.9606918	743218596		icon_blue_example.png	24,24	0,-24
+57.7199106	11.9611156	743218601		icon_blue_example.png	24,24	0,-24
+57.7198524	11.9615393	743218604		icon_blue_example.png	24,24	0,-24
+57.7197089	11.9619202	743218606		icon_blue_example.png	24,24	0,-24
+57.7193485	11.9625393	743218607		icon_blue_example.png	24,24	0,-24
+57.7189677	11.9629577	743218609		icon_blue_example.png	24,24	0,-24
+57.7176094	11.9637704	743218613		icon_blue_example.png	24,24	0,-24
+57.7161656	11.9644705	743218616		icon_blue_example.png	24,24	0,-24
+57.7160203	11.9645858	743218622		icon_blue_example.png	24,24	0,-24
+57.715347	11.9654736	743218624		icon_blue_example.png	24,24	0,-24
+57.7131748	11.9686628	743218641		icon_blue_example.png	24,24	0,-24
+57.7126974	11.9691858	743218647		icon_blue_example.png	24,24	0,-24
+57.7120226	11.9695211	743218653		icon_blue_example.png	24,24	0,-24
+57.7113311	11.9694353	743218659		icon_blue_example.png	24,24	0,-24
+57.7110274	11.9693494	743218662		icon_blue_example.png	24,24	0,-24
+57.7108001	11.9692207	743218668		icon_blue_example.png	24,24	0,-24
+57.7106443	11.9689069	743218676		icon_blue_example.png	24,24	0,-24
+57.7105431	11.9684053	743218683		icon_blue_example.png	24,24	0,-24
+57.7105336	11.9681049	743218687		icon_blue_example.png	24,24	0,-24
+57.7106004	11.9678554	743218693		icon_blue_example.png	24,24	0,-24
+57.7107356	11.9678259	743218697		icon_blue_example.png	24,24	0,-24
+57.7108692	11.9683409	743218702		icon_blue_example.png	24,24	0,-24
+57.7108863	11.9685126	743218705		icon_blue_example.png	24,24	0,-24
+57.7108225	11.9686628	743218708		icon_blue_example.png	24,24	0,-24
+57.7104565	11.9691563	743218713		icon_blue_example.png	24,24	0,-24
+57.7103242	11.9689417	743218719		icon_blue_example.png	24,24	0,-24
+57.7102098	11.9684563	743218722		icon_blue_example.png	24,24	0,-24
+57.709933	11.966635	743218725		icon_blue_example.png	24,24	0,-24
+57.7077295	11.967783	743218731		icon_blue_example.png	24,24	0,-24
+57.7066877	11.9682417	743218739		icon_blue_example.png	24,24	0,-24
+57.70438	11.9694219	743218744		icon_blue_example.png	24,24	0,-24
+57.7032602	11.9709722	743218753		icon_blue_example.png	24,24	0,-24
+57.7002276	11.9753576	743218761		icon_blue_example.png	24,24	0,-24
+57.6990488	11.9771466	743218769		icon_blue_example.png	24,24	0,-24
+57.697406	11.9793702	743218778		icon_blue_example.png	24,24	0,-24
+57.6973085	11.9790778	743218787		icon_blue_example.png	24,24	0,-24
+57.6993432	11.9763527	743218818		icon_blue_example.png	24,24	0,-24
+57.7005363	11.9746066	743218827		icon_blue_example.png	24,24	0,-24
+57.699813	11.9728765	743218834		icon_blue_example.png	24,24	0,-24
+57.6989778	11.9706664	743218841		icon_blue_example.png	24,24	0,-24
+57.698577	11.9697866	743218848		icon_blue_example.png	24,24	0,-24
+57.6971933	11.9705162	743218853		icon_blue_example.png	24,24	0,-24
+57.6971488	11.9701004	743218859		icon_blue_example.png	24,24	0,-24
+57.6967738	11.9678769	743218867		icon_blue_example.png	24,24	0,-24
+57.6964877	11.9664178	743218879		icon_blue_example.png	24,24	0,-24
+57.6971896	11.9661066	743218891		icon_blue_example.png	24,24	0,-24
+57.6979054	11.9657016	743218902		icon_blue_example.png	24,24	0,-24
+57.6976247	11.9640789	743218910		icon_blue_example.png	24,24	0,-24
+57.6974561	11.9628048	743218920		icon_blue_example.png	24,24	0,-24
+57.6975413	11.9608098	743218932		icon_blue_example.png	24,24	0,-24
+57.6970104	11.9607105	743218938		icon_blue_example.png	24,24	0,-24
+57.6966784	11.9605523	743218947		icon_blue_example.png	24,24	0,-24
+57.6964264	11.9603163	743218967		icon_blue_example.png	24,24	0,-24
+57.6957467	11.9590938	743218978		icon_blue_example.png	24,24	0,-24
+57.6953829	11.9585219	743218983		icon_blue_example.png	24,24	0,-24
+57.6948293	11.9581282	743218988		icon_blue_example.png	24,24	0,-24
+57.6941845	11.9578138	743218993		icon_blue_example.png	24,24	0,-24
+57.6932441	11.9568267	743218999		icon_blue_example.png	24,24	0,-24
+57.6924612	11.9558611	743219008		icon_blue_example.png	24,24	0,-24
+57.691361	11.954225	743219010		icon_blue_example.png	24,24	0,-24
+57.690986	11.9538173	743219011		icon_blue_example.png	24,24	0,-24
+57.6906147	11.9535812	743219015		icon_blue_example.png	24,24	0,-24
+57.690371	11.9535008	743219028		icon_blue_example.png	24,24	0,-24
+57.6902638	11.9535437	743219030		icon_blue_example.png	24,24	0,-24
+57.6890265	11.9533291	743219031		icon_blue_example.png	24,24	0,-24
+57.6887811	11.9533237	743219035		icon_blue_example.png	24,24	0,-24
+57.6884301	11.9537368	743219039		icon_blue_example.png	24,24	0,-24
+57.6882578	11.9537958	743219043		icon_blue_example.png	24,24	0,-24
+57.6880923	11.9536295	743219046		icon_blue_example.png	24,24	0,-24
+57.6879366	11.9533452	743219050		icon_blue_example.png	24,24	0,-24
+57.686873	11.9533023	743219052		icon_blue_example.png	24,24	0,-24
+57.6865689	11.9532433	743219054		icon_blue_example.png	24,24	0,-24
+57.6861462	11.9530501	743219055		icon_blue_example.png	24,24	0,-24
+57.6859698	11.9533076	743219056		icon_blue_example.png	24,24	0,-24
+57.6848391	11.9519558	743219060		icon_blue_example.png	24,24	0,-24
+57.6849288	11.9518217	743219064		icon_blue_example.png	24,24	0,-24
+57.6852669	11.9507917	743219066		icon_blue_example.png	24,24	0,-24
+57.6848221	11.9502821	743219073		icon_blue_example.png	24,24	0,-24
+57.6842773	11.94981	743219080		icon_blue_example.png	24,24	0,-24
+57.683702	11.9489088	743219089		icon_blue_example.png	24,24	0,-24
+57.6836814	11.947852	743219098		icon_blue_example.png	24,24	0,-24
+57.6833255	11.9479432	743219104		icon_blue_example.png	24,24	0,-24
+57.6828941	11.9477286	743219112		icon_blue_example.png	24,24	0,-24
+57.6825715	11.9474926	743219117		icon_blue_example.png	24,24	0,-24
+57.682006	11.9465002	743219122		icon_blue_example.png	24,24	0,-24
+57.6818646	11.945599	743219125		icon_blue_example.png	24,24	0,-24
+57.6817547	11.9455212	743219128		icon_blue_example.png	24,24	0,-24
+57.6815081	11.9454783	743219131		icon_blue_example.png	24,24	0,-24
+57.681369	11.9452637	743219133		icon_blue_example.png	24,24	0,-24
+57.6813437	11.9450706	743219147		icon_blue_example.png	24,24	0,-24
+57.6809646	11.9448909	743219156		icon_blue_example.png	24,24	0,-24
+57.6808046	11.9446978	743219161		icon_blue_example.png	24,24	0,-24
+57.6808081	11.9438202	743219169		icon_blue_example.png	24,24	0,-24
+57.6805952	11.9424876	743219176		icon_blue_example.png	24,24	0,-24
+57.6798871	11.9408461	743219183		icon_blue_example.png	24,24	0,-24
+57.6797328	11.9402453	743219188		icon_blue_example.png	24,24	0,-24
+57.6794167	11.9399663	743219193		icon_blue_example.png	24,24	0,-24
+57.6791067	11.9395935	743219199		icon_blue_example.png	24,24	0,-24
+57.6787854	11.9395291	743219212		icon_blue_example.png	24,24	0,-24
+57.6785827	11.9395801	743219222		icon_blue_example.png	24,24	0,-24
+57.6784622	11.9392797	743219234		icon_blue_example.png	24,24	0,-24
+57.6780913	11.9390651	743219243		icon_blue_example.png	24,24	0,-24
+57.6776665	11.9389364	743219246		icon_blue_example.png	24,24	0,-24
+57.7059428	11.9388224	778203863	bicycle=yes,foot=yes,highway=footway,foot=yes,highway=footway,	icon_blue_example.png	24,24	0,-24
+57.7096392	11.9315912	954993346	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7097568	11.9314378	954993520	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7098049	11.9313358	954994636	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7077796	11.9344493	968652583	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.707797	11.9343391	968652589	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7076686	11.9344247	968652626	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7076962	11.9342935	968652684	foot=designated,highway=cycleway,lit=yes,segregated=yes,	icon_blue_example.png	24,24	0,-24
+57.7068593	11.934067	985025888		icon_blue_example.png	24,24	0,-24
+57.7078907	11.9348963	1024929172	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7075138	11.9346764	1024929173	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7078866	11.9346588	1024929181	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7076493	11.9351451	1024929195	highway=unclassified,junction=roundabout,	icon_blue_example.png	24,24	0,-24
+57.7081179	11.9401853	1024931993	highway=service,	icon_blue_example.png	24,24	0,-24
+57.7060838	11.940594	1024931994		icon_blue_example.png	24,24	0,-24
+57.7075693	11.9397193	1024932001	highway=service,	icon_blue_example.png	24,24	0,-24
+57.7072922	11.9325496	1024937666	highway=residential,name=Gjutaregetan,	icon_blue_example.png	24,24	0,-24
+57.7051651	11.9336338	1024937676	highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7049553	11.9331854	1024937678	highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7047202	11.9328268	1024937682	highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7076757	11.9315131	1024937700	highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.7076563	11.9335968	1024937701	highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.7062854	11.9348504	1024937705	highway=residential,name=Plejadgatan,	icon_blue_example.png	24,24	0,-24
+57.7071706	11.9326426	1024937706	highway=residential,name=Gjutaregetan,	icon_blue_example.png	24,24	0,-24
+57.7076836	11.9331653	1024937708	highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.7073618	11.9343199	1024937715	highway=residential,name=Gamla Ceresgatan,	icon_blue_example.png	24,24	0,-24
+57.7123192	11.9464461	1027776836		icon_blue_example.png	24,24	0,-24
+57.6807665	11.9433057	1058860441		icon_blue_example.png	24,24	0,-24
+57.6807939	11.9435991	1058860622		icon_blue_example.png	24,24	0,-24
+57.6806475	11.9426816	1058860655		icon_blue_example.png	24,24	0,-24
+57.7063401	11.9303674	1097960880	highway=residential,name=Lindholmsvägen,	icon_blue_example.png	24,24	0,-24
+57.6912102	11.954061	1241293480		icon_blue_example.png	24,24	0,-24
+

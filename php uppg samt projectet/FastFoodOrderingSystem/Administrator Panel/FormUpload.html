@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>Upload new item</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="general.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <form class="form-signin" action="AddNewItem.php" method="post" enctype="multipart/form-data">
+   	<h3 class="form-signin-heading">In this page you can enter a new item into your menu list.</h3>
+	<h3 class="form-signin-heading">Fill in the required fields below and click submit.</h3>
+		<input type="text" name="header" class="form-control" placeholder="Name of item" autofocus>
+		<input type="text" name="price" class="form-control" placeholder="Price of the item" autofocus>
+        Image:<input type='file' name= 'file' id="file"><br>
+        <textarea name="description" cols="45" rows="5">
+		Description of the food item..
+		</textarea><br>
+         <button class="btn btn-lg btn-primary btn-block" name="submit" type="submit" value="submit">Submit</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>

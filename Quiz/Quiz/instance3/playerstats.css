@@ -1,0 +1,43 @@
+body {
+
+}
+
+#playerstatsname {
+	text-align: left;
+}
+#playerstatslevel {
+	text-align: left;
+}
+#playerstatsbadges {
+	text-align: left;
+}
+#playerstatsxp {
+	text-align: left;
+}
+#playerstatsleaderboard {
+	text-align: left;
+}
+#achievement
+{
+background:#000000;
+color:#EEEEEE;
+border-style:solid;
+border-color:#98bf21;
+display:none;
+}
+#correct
+{
+background:#000000;
+color:#EEEEEE;
+border-style:solid;
+border-color:#98bf21;
+display:none;
+}
+#allright
+{
+background:#000000;
+color:#EEEEEE;
+border-style:solid;
+border-color:#98bf21;
+display:none;
+}

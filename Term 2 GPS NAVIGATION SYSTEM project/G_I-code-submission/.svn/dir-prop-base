@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 79
+JMapViewer.jar
+JMapViewer_Demo.jar
+JMapViewer_src.jar
+bin
+tiles
+JMapViewer.zip
+
+END

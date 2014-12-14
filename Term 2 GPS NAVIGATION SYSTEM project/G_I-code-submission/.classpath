@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="resources/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="resources/commons-lang-2.2.jar"/>
+	<classpathentry kind="lib" path="resources/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="resources/facebook-java-api-3.0.2.jar"/>
+	<classpathentry kind="lib" path="resources/facebook-java-api-annotation-processor-3.0.2.jar"/>
+	<classpathentry kind="lib" path="resources/facebook-java-api-schema-3.0.2.jar"/>
+	<classpathentry kind="lib" path="resources/jaxb-api-2.1.jar"/>
+	<classpathentry kind="lib" path="resources/jaxb-impl-2.1.9.jar"/>
+	<classpathentry kind="lib" path="resources/json-20080701.jar"/>
+	<classpathentry kind="lib" path="resources/runtime-0.4.1.5.jar"/>
+	<classpathentry kind="lib" path="resources/RXTXcomm.jar"/>
+	<classpathentry kind="lib" path="resources/smack.jar"/>
+	<classpathentry kind="lib" path="resources/smackx-debug.jar"/>
+	<classpathentry kind="lib" path="resources/smackx-jingle.jar"/>
+	<classpathentry kind="lib" path="resources/smackx.jar"/>
+	<classpathentry kind="lib" path="resources/stax-api-1.0-2.jar"/>
+	<classpathentry kind="lib" path="resources/twitter4j-async-2.2.1.jar"/>
+	<classpathentry kind="lib" path="resources/twitter4j-core-2.2.1.jar"/>
+	<classpathentry kind="lib" path="resources/twitter4j-examples-2.2.1.jar"/>
+	<classpathentry kind="lib" path="resources/twitter4j-media-support-2.2.1.jar"/>
+	<classpathentry kind="lib" path="resources/twitter4j-stream-2.2.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

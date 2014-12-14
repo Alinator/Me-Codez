@@ -1,0 +1,35 @@
+This textfile will tell you how to create a new quiz folder containing your own designed questiones.
+
+The program is designed so that each question belongs to one separate html file. So one html file will represent one question. You will have to use the
+QuizTemplate.html attached in this folder. Just make copies of this template and add you question into each copy of the template.
+
+Some important requirements that needs to be followed are:
+
+1) you need to have 40 questions, the program is designed for 40 questions, not more not less. So 40 questions( that is 40 copies of the QuizTemplate.html file
+containing you questions) needs to be created in order to be compatible with the design of the program. 
+
+2) all of the questions should be placed inside a folder with a name of your choice.
+
+3) All questions needs to be renamed. it means that each copy of the QuizTemplate.html you make to create a new question, needs to be renamed to the following
+name standard: Quiz#.html.
+
+Example: if your creating your first question the name will be: Quiz1.html. Similarly if you are creating a second question the name will be: Quiz2.html and so on until Quiz40.html.
+OBS: do remember that you need to create 40 questions, not less, not more!
+
+4) do not remove anything from the <header> section inside QuizTemplate.html or else the program will not behave correctly!
+
+5) Each of the answers inside the <body> tag contains calls to the following functions(as you can see in the template): changeQuiz() which will change
+the current question to a new question and increaseexp(100) that will increase the experience points of the player.
+as you can see in the template, for every correct answer, theese two function calls needs to be together, and for every wrong answer, only changeQuiz()
+function should be called inside the onclick event. You can as you wish change the amount of experiencepoints you want to give the player inside the
+parameters of the increaseexp() function call.
+
+6) The finished.html file attached in this folder also needs the be with your questions that you will have created. No changing needs to be done inside
+finished.html but for the one who needs to change anything in the <body> section its free to do so.
+
+7) place the folder with your questions in the main folder of the project.
+
+now when you run the program, you just need to specify the foldername that will be asked from you when compiling the program.
+
+for complete example on how your questions folder needs to be designed, please have a look at the Quizzes folder containing 40 premade questions inside
+the main project folder.

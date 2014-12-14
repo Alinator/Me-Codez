@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>Logga in</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+	
+      <form class="form-signin" action="LogIn.php" method="post" enctype="multipart/form-data">
+      	<img src="../LoginPage/page.png" class="img-responsive" alt="Responsive image"><br>
+        <h2 class="form-signin-heading">Var god logga in</h2>
+        <input type="text" name="email" class="form-control" placeholder="Email address" autofocus>
+        <input type="password" name="password" class="form-control" placeholder="Password">
+        <button class="btn btn-lg btn-primary btn-block" name="submit" type="submit">Sign in</button>
+        <h3 class="form-signin-heading">Har du inte registrerat dig som ny kund? Klicka <a href="../CreateNewUser/index.html">här</a> för att få ett konto.</h3>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>

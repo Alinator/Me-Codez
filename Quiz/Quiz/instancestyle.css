@@ -1,0 +1,32 @@
+.includedcontent{
+width:400px;
+height: 100px;
+padding: 20px;
+margin: auto;
+background-color:#4172A0;
+border:5px solid white;
+}
+
+
+.playerstats{
+width:200px;
+margin-top: 20px;
+height: auto;
+padding: 10px;
+background-color:#4172A0;
+border-right:3px solid white;
+border-top:3px solid white;
+border-bottom:3px solid white;
+}
+
+body{
+background-color:#333333;
+margin:0px;
+ }
+ 
+p{
+font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif;
+font-size: 14px;
+color: #EEE;
+margin: 0px;
+}

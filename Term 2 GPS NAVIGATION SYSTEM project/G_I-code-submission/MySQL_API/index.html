@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Pathfinding API</title>
+<style type="text/css">
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.java  {font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0; font-size: 16px;}
+.java a:link {color: #000060;}
+.java a:hover {background-color: #f0f000;}
+.java .imp {font-weight: bold; color: red;}
+.java .kw1 {color: #000000; font-weight: bold;}
+.java .kw2 {color: #000066; font-weight: bold;}
+.java .kw3 {color: #003399;}
+.java .kw4 {color: #000066; font-weight: bold;}
+.java .co1 {color: #666666; font-style: italic;}
+.java .co2 {color: #006699;}
+.java .co3 {color: #008000; font-style: italic; font-weight: bold;}
+.java .coMULTI {color: #666666; font-style: italic;}
+.java .es0 {color: #000099; font-weight: bold;}
+.java .br0 {color: #009900;}
+.java .sy0 {color: #339933;}
+.java .st0 {color: #0000ff;}
+.java .nu0 {color: #cc66cc;}
+.java .me1 {color: #006633;}
+.java .me2 {color: #006633;}
+.java span.xtra { display:block; }
+</style>
+
+</head>
+<body>
+<h1>Navigation API</h1>
+<h2>Overview</h2>
+The API finds an optimal path between any two locations in Västra Götaland. The resulting path can consist of roads and footways.
+It takes about 1.5 seconds for the server to answer your query. 
+<h2>Usage</h2>
+To get the path, you should pass four parameters as a GET-query: lat1, lat2, lon1, lon2 - the coordinates of starting and ending point. 
+The response you will get is a sequence of waypoints (pairs of coordinates).
+<h3>Example</h3>
+query: 
+<div class="java">http<span class="sy0">:</span><span class="co1">//api.geoproject.se/getpath.php?lat1=57.70718166666666&amp;lon1=11.93733&amp;lat2=57.70789&amp;lon2=11.92927</span></div>
+response:
+<div class="java"><span class="br0">&#40;</span><span class="nu0">57.7068102</span>,<span class="nu0">11.9374346</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.7070514</span>,<span class="nu0">11.9366572</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.7066187</span>,<span class="nu0">11.9362689</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.7061618</span>,<span class="nu0">11.935859</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.7063082</span>,
+<span class="nu0">11.9352978</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.7064177</span>,<span class="nu0">11.9348636</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.7064177</span>,<span class="nu0">11.9348636</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.707309</span>,<span class="nu0">11.9348401</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.7074175</span>,<span class="nu0">11.9341802</span><span class="br0">&#41;</span>,
+<span class="br0">&#40;</span><span class="nu0">57.7076729</span>,<span class="nu0">11.9323363</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.7076558</span>,<span class="nu0">11.930785</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.7077212</span>,<span class="nu0">11.9300547</span><span class="br0">&#41;</span>,<span class="br0">&#40;</span><span class="nu0">57.7079391</span>,<span class="nu0">11.9291313</span><span class="br0">&#41;</span>,</div>
+
+<h2>Java</h2>
+In our project, the API response is parsed into an object of the Route class, which contains a number of waypoints (WayPoint class).
+All the classes are available on this page. Any possible updates will be there as well.
+<br/>
+The PathFinder class. Calls the API and gets the result as a string.
+<div class="java"><span class="kw1">import</span> <span class="co2">java.io.*</span><span class="sy0">;</span><br />
+<span class="kw1">import</span> <span class="co2">java.net.*</span><span class="sy0">;</span><br />
+<span class="co3">/**<br />
+&nbsp;* <br />
+&nbsp;* @author Dmitry Igoshin<br />
+&nbsp;* Pathfinder class. Returns a path from point A to point B.<br />
+&nbsp;*<br />
+&nbsp;*/</span><br />
+<span class="kw1">public</span> <span class="kw1">class</span> PathFinder <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* The actual pathfinding method.<br />
+&nbsp; &nbsp; &nbsp;* @return - the path in (lat,lon),(lat,lon), format<br />
+&nbsp; &nbsp; &nbsp;* @throws Exception<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">static</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Astring+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a> getPath<span class="br0">&#40;</span><span class="kw4">double</span> lat1, <span class="kw4">double</span> lon1, <span class="kw4">double</span> lat2, <span class="kw4">double</span> lon2<span class="br0">&#41;</span> <span class="kw1">throws</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Aexception+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">Exception</span></a> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Astring+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a> codePage <span class="sy0">=</span> <span class="kw1">new</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Astring+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#40;</span><span class="st0">&quot;UTF-8&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; StringBuilder sb <span class="sy0">=</span> <span class="kw1">new</span> StringBuilder<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Aurl+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">URL</span></a> pageURL <span class="sy0">=</span> <span class="kw1">new</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Aurl+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">URL</span></a><span class="br0">&#40;</span><span class="st0">&quot;http://api.geoproject.se/getpath.php?lat1=&quot;</span> <span class="sy0">+</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adouble+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">Double</span></a>.<span class="me1">toString</span><span class="br0">&#40;</span>lat1<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">&quot;&amp;lon1=&quot;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">+</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adouble+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">Double</span></a>.<span class="me1">toString</span><span class="br0">&#40;</span>lon1<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">&quot;&amp;lat2=&quot;</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">+</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adouble+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">Double</span></a>.<span class="me1">toString</span><span class="br0">&#40;</span>lat2<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">&quot;&amp;lon2=&quot;</span> <span class="sy0">+</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adouble+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">Double</span></a>.<span class="me1">toString</span><span class="br0">&#40;</span>lon2<span class="br0">&#41;</span> <span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Aurlconnection+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">URLConnection</span></a> uc <span class="sy0">=</span> pageURL.<span class="me1">openConnection</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Abufferedreader+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">BufferedReader</span></a> br <span class="sy0">=</span> <span class="kw1">new</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Abufferedreader+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">BufferedReader</span></a><span class="br0">&#40;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">new</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Ainputstreamreader+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">InputStreamReader</span></a><span class="br0">&#40;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; uc.<span class="me1">getInputStream</span><span class="br0">&#40;</span><span class="br0">&#41;</span>, codePage<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Astring+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a> inputLine<span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">while</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>inputLine <span class="sy0">=</span> br.<span class="me1">readLine</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sb.<span class="me1">append</span><span class="br0">&#40;</span>inputLine<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span> &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span> <span class="kw1">finally</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; br.<span class="me1">close</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> sb.<span class="me1">toString</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span><br />
+&nbsp;</div>
+<br/>
+Waypoint class. Stores information about a waypoint.
+<br/>
+<div class="java"><br />
+<span class="kw1">import</span> <span class="co2">java.util.ArrayList</span><span class="sy0">;</span><br />
+<br />
+<span class="co3">/**<br />
+&nbsp;* WayPoint class with constructors, set and get methods.<br />
+&nbsp;* @author Sebastian Hansson<br />
+&nbsp;*<br />
+&nbsp;*/</span><br />
+<br />
+<span class="kw1">public</span> <span class="kw1">class</span> WayPoint <span class="br0">&#123;</span><br />
+<br />
+&nbsp; &nbsp; <span class="kw1">protected</span> <span class="kw4">double</span> latitude<span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">protected</span> <span class="kw4">double</span> longitude<span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">protected</span> <span class="kw4">int</span> id<span class="sy0">;</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">public</span> WayPoint<span class="br0">&#40;</span><span class="kw4">double</span> latitude, <span class="kw4">double</span> longitude, <span class="kw4">int</span> id<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">latitude</span> <span class="sy0">=</span> latitude<span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">longitude</span> <span class="sy0">=</span> longitude<span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">id</span> <span class="sy0">=</span> id<span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">public</span> <span class="kw4">double</span> getLat<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">latitude</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">public</span> <span class="kw4">double</span> getLong<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">longitude</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">public</span> <span class="kw4">double</span> getId<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">id</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">public</span> <span class="kw4">void</span> setLat<span class="br0">&#40;</span><span class="kw4">double</span> latitude<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">latitude</span> <span class="sy0">=</span> latitude<span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">public</span> <span class="kw4">void</span> setLong<span class="br0">&#40;</span><span class="kw4">double</span> longitude<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">longitude</span> <span class="sy0">=</span> longitude<span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">public</span> <span class="kw4">void</span> setId<span class="br0">&#40;</span><span class="kw4">int</span> id<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">id</span> <span class="sy0">=</span> id<span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+<span class="br0">&#125;</span><br />
+&nbsp;</div>
+<br/>
+Route class. Stores information about a route. A route is a set of waypoints.
+<br/>
+<div class="java"><br />
+<br />
+<span class="kw1">import</span> <span class="co2">java.util.ArrayList</span><span class="sy0">;</span><br />
+<span class="kw1">import</span> <span class="co2">java.util.Arrays</span><span class="sy0">;</span><br />
+<br />
+<span class="co3">/**<br />
+&nbsp;* Class for handling wayPoints<br />
+&nbsp;* @author Johan<br />
+&nbsp;*/</span><br />
+<br />
+<span class="kw1">public</span> <span class="kw1">class</span> Route <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; ArrayList<span class="sy0">&lt;</span>WayPoint<span class="sy0">&gt;</span> wayPoints<span class="sy0">;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* Default constructor (use add after this!)<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> Route<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">wayPoints</span> <span class="sy0">=</span> <span class="kw1">new</span> ArrayList<span class="sy0">&lt;</span>WayPoint<span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* Constructs an arraylist of waypoints from the given arraylist<br />
+&nbsp; &nbsp; &nbsp;* @param waypoints<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;given arraylist of waypoints<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> Route<span class="br0">&#40;</span>ArrayList<span class="sy0">&lt;</span>WayPoint<span class="sy0">&gt;</span> waypoints<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">wayPoints</span> <span class="sy0">=</span> waypoints<span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* Constructs an arraylist of waypoints from the given array<br />
+&nbsp; &nbsp; &nbsp;* @param waypoints<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;given array of waypoints<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> Route<span class="br0">&#40;</span>WayPoint<span class="br0">&#91;</span><span class="br0">&#93;</span> waypoints<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">wayPoints</span> <span class="sy0">=</span> <span class="kw1">new</span> ArrayList<span class="sy0">&lt;</span>WayPoint<span class="sy0">&gt;</span><span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Aarrays+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">Arrays</span></a>.<span class="me1">asList</span><span class="br0">&#40;</span>waypoints<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* adds a point at the end of the list<br />
+&nbsp; &nbsp; &nbsp;* @param point<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> <span class="kw4">void</span> addPoint<span class="br0">&#40;</span>WayPoint point<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">add</span><span class="br0">&#40;</span>point<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* adds a point at the given index in the list<br />
+&nbsp; &nbsp; &nbsp;* @param point<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;given point<br />
+&nbsp; &nbsp; &nbsp;* @param index<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;given index<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> <span class="kw4">void</span> addPoint<span class="br0">&#40;</span>WayPoint point, <span class="kw4">int</span> index<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">add</span><span class="br0">&#40;</span>index, point<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* adds a point at index 0<br />
+&nbsp; &nbsp; &nbsp;* @param point<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;given point<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> <span class="kw4">void</span> addHead<span class="br0">&#40;</span>WayPoint point<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">add</span><span class="br0">&#40;</span><span class="nu0">0</span>, point<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">size</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">get</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span>.<span class="me1">setId</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* @return<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp;returns the first value<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> WayPoint getHead<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">get</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* @param index<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the given index<br />
+&nbsp; &nbsp; &nbsp;* @return<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;returns the point after the given index<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> WayPoint getNext<span class="br0">&#40;</span><span class="kw4">int</span> index<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">get</span><span class="br0">&#40;</span>index <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* @param index<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the given index<br />
+&nbsp; &nbsp; &nbsp;* @return<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;returns the point from the given index<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> WayPoint getPoint<span class="br0">&#40;</span><span class="kw4">int</span> index<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">get</span><span class="br0">&#40;</span>index<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* Removes a single waypoint at given index<br />
+&nbsp; &nbsp; &nbsp;* @param index<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the given index<br />
+&nbsp; &nbsp; &nbsp;* @return<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;returns the removed point (for safety)<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> WayPoint removePoint<span class="br0">&#40;</span><span class="kw4">int</span> index<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; WayPoint toReturn <span class="sy0">=</span> <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">get</span><span class="br0">&#40;</span>index<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">remove</span><span class="br0">&#40;</span>index<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> toReturn<span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* Removes a single specific point<br />
+&nbsp; &nbsp; &nbsp;* @param point<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the point to be removed<br />
+&nbsp; &nbsp; &nbsp;* @return<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;returns the removed point (for safety)<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> WayPoint removePoint<span class="br0">&#40;</span>WayPoint point<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">size</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">get</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span>.<span class="me1">equals</span><span class="br0">&#40;</span>point<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">wayPoints</span>.<span class="me1">remove</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">break</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> point<span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span><br />
+&nbsp;</div>
+<br/>
+PathStringParser class. Converts a string from PathFinder class into an object of Route class.
+<br/>
+<div class="java"><br />
+<span class="co3">/**<br />
+&nbsp;* Class to parse path of format string to format Route<br />
+&nbsp;* @author Johan<br />
+&nbsp;*<br />
+&nbsp;*/</span><br />
+<span class="kw1">public</span> <span class="kw1">class</span> PathStringParser <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span class="co3">/**<br />
+&nbsp; &nbsp; &nbsp;* Parses a given string to a Route object<br />
+&nbsp; &nbsp; &nbsp;* @param path<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the given path<br />
+&nbsp; &nbsp; &nbsp;* @return<br />
+&nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;returns the path as a Route object<br />
+&nbsp; &nbsp; &nbsp;*/</span><br />
+&nbsp; &nbsp; <span class="kw1">public</span> Route parsePathString<span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Astring+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a> path<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Route route <span class="sy0">=</span> <span class="kw1">new</span> Route<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Astring+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a> withoutParantheses <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> path.<span class="me1">length</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> i <span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">if</span> <span class="br0">&#40;</span>path.<span class="me1">charAt</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span> <span class="sy0">!=</span> <span class="st0">'('</span> <span class="sy0">&amp;&amp;</span> path.<span class="me1">charAt</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span> <span class="sy0">!=</span> <span class="st0">')'</span><span class="br0">&#41;</span> withoutParantheses <span class="sy0">+=</span> path.<span class="me1">charAt</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Astring+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span> pathArray <span class="sy0">=</span> withoutParantheses.<span class="me1">split</span><span class="br0">&#40;</span><span class="st0">&quot;,&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> pathArray.<span class="me1">length</span> <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span> i<span class="sy0">+=</span><span class="nu0">2</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">int</span> j <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">double</span> lat <span class="sy0">=</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adouble+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">Double</span></a>.<span class="me1">parseDouble</span><span class="br0">&#40;</span>pathArray<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">double</span> lon <span class="sy0">=</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adouble+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">Double</span></a>.<span class="me1">parseDouble</span><span class="br0">&#40;</span>pathArray<span class="br0">&#91;</span>i<span class="sy0">+</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; route.<span class="me1">addPoint</span><span class="br0">&#40;</span><span class="kw1">new</span> WayPoint<span class="br0">&#40;</span>lat, lon, j<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; j<span class="sy0">++;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> route<span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span><br />
+&nbsp;</div>
+<br/>
+And, finally, how is it used:
+<br/>	
+<div class="java"><span class="kw1">try</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; pathString <span class="sy0">=</span> PathFinder.<span class="me1">getPath</span><span class="br0">&#40;</span>info.<span class="me1">getLat</span><span class="br0">&#40;</span><span class="br0">&#41;</span>, info.<span class="me1">getLon</span><span class="br0">&#40;</span><span class="br0">&#41;</span>, lat, lon<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span> <span class="kw1">catch</span> <span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Aexception+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky"><span class="kw3">Exception</span></a> e<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;e.<span class="me1">printStackTrace</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+currentRoute <span class="sy0">=</span> pathStringParser.<span class="me1">parsePathString</span><span class="br0">&#40;</span>pathString<span class="br0">&#41;</span><span class="sy0">;</span></div>
+<br/>
+Fisrt, the API is called through the PathFinder class. Then the response is parsed, and we can display waypoints on the map and connect them.
+<br/>
+<h2>Downloads</h3>
+<a href="files/PathFinder.java">PathFinder.java</a><br/>
+<a href="files/PathStringParser.java">PathStringParser.java</a><br/>
+<a href="files/Route.java">Route.java</a><br/>
+<a href="files/WayPoint.java">WayPoint.java</a><br/>
+
+
+
+
+<h2>Questions and feedback</h2>
+If you have any questions, you can email me at <a href="mailto:dmitry.igoshin@yandex.ru">dmitry.igoshin@yandex.ru</a>.
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter6956680 = new Ya.Metrika({id:6956680,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        }
+        catch(e) { }
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/6956680" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

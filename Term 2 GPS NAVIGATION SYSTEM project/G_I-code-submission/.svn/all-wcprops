@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/25577/applications/viewer/jmapviewer
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/9618/applications/viewer/jmapviewer/.classpath
+END
+Gpl.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/25370/applications/viewer/jmapviewer/Gpl.txt
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/9618/applications/viewer/jmapviewer/.project
+END
+Readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/25370/applications/viewer/jmapviewer/Readme.txt
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/25370/applications/viewer/jmapviewer/build.xml
+END
